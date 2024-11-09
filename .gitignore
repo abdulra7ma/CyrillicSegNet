@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+venv.bak/
+env.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+data/raw/*
+data/processed/*
+results/models/checkpoints/*
+*.npy
+*.h5
+*.pth
+*.pkl
+
+# Keep specific files
+!data/README.md
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!results/models/checkpoints/.gitkeep
+
+# Logs
+*.log
+logs/
+tensorboard/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Poetry
+poetry.lock
