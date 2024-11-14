@@ -67,3 +67,6 @@ htmlcov/
 
 # Poetry
 poetry.lock
+
+# ignore data folder
+data/*
