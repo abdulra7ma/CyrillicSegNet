@@ -69,4 +69,6 @@ htmlcov/
 poetry.lock
 
 # ignore data folder
-data/*
+data/*results/models/combined_cnn_model.h5
+results/best_model.pth
+results/final_model.pth
