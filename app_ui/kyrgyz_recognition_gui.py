@@ -1,31 +1,32 @@
+import logging
 import sys
-from PyQt6.QtWidgets import (
-    QApplication,
-    QMainWindow,
-    QWidget,
-    QVBoxLayout,
-    QHBoxLayout,
-    QPushButton,
-    QLabel,
-    QFileDialog,
-    QProgressBar,
-    QScrollArea,
-    QGridLayout,
-    QMessageBox,
-    QFrame,
-    QSplitter,
-)
-from PyQt6.QtCore import Qt, QThread, pyqtSignal, QSize
-from PyQt6.QtGui import QImage, QPixmap, QFont, QIcon
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Optional
+
 import cv2
 import numpy as np
-from pathlib import Path
-import logging
-from typing import Optional
-from dataclasses import dataclass
+from PyQt6.QtCore import Qt, QThread, pyqtSignal
+from PyQt6.QtGui import QFont, QImage, QPixmap
+from PyQt6.QtWidgets import (
+    QApplication,
+    QFileDialog,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
+    QLabel,
+    QMainWindow,
+    QMessageBox,
+    QProgressBar,
+    QPushButton,
+    QScrollArea,
+    QSplitter,
+    QVBoxLayout,
+    QWidget,
+)
 
 # Import your recognition system
-from word_recogination import WordRecognizer, WordRecognitionResult
+from word_recogination import WordRecognitionResult, WordRecognizer
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
