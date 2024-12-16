@@ -66,17 +66,62 @@ PyQt5>=5.15.0
 
 ## Training
 
-1. Prepare the datasets:
-```bash
-python src/data_preprocessing.py
-```
+The project supports multiple training configurations for different use cases. For detailed training documentation and parameter configurations, see [ModelTraining.md](docs/ModelTraining.md).
 
-2. Train the model:
+### Quick Start
+
+
+1. Basic training with default configuration:
 ```bash
 python src/train_model.py --epochs 100 --batch-size 32
 ```
 
-Training configurations can be modified in `src/model.py`.
+### Common Training Configurations
+
+1. High-Performance Training:
+```bash
+python src/train_model.py \
+    --epochs 200 \
+    --batch-size 16 \
+    --learning-rate 0.0005 \
+    --hidden-size 4096
+```
+
+2. Fast Prototype Training:
+```bash
+python src/train_model.py \
+    --epochs 50 \
+    --batch-size 64 \
+    --learning-rate 0.002
+```
+
+3. Memory-Efficient Training:
+```bash
+python src/train_model.py \
+    --epochs 150 \
+    --batch-size 8 \
+    --hidden-size 1024
+```
+
+### Training Output
+
+The training process generates:
+- Model checkpoints (`best_model.pth`, `final_model.pth`)
+- Training statistics and plots
+- Validation metrics
+
+All outputs are saved in the `results/` directory.
+
+### Key Parameters
+
+- `epochs`: Number of training cycles
+- `batch-size`: Samples per training batch
+- `learning-rate`: Controls optimization speed
+- `hidden-size`: Model capacity
+- `dropout`: Regularization strength
+
+For a complete list of parameters and advanced configurations, refer to [ModelTraining.md](docs/ModelTraining.md).
+
 
 ## User Interface
 
